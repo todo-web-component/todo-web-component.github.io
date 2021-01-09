@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Todo Web Component - A promised compromise</title>
+    <script src="console.js"></script>
+  </head>
+  <body>
+    Only when you had a premise you can say a promise failed Premise, Promise
+  </body>
+  <script>
+    function solve(problem) {
+      return new Promise((resolve, reject) => {
+        let solutions = new Premise( problem );
+        let offers = await fetch(solutions);
+        offers.filter(offer => solutions.includes( offer.premise ));
+        if (offers.length) resolve(offers);
+        else reject(problem);
+      });
+    }
+    solve(problem);
+  </script>
+</html>
